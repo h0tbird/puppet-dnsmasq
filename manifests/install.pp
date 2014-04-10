@@ -1,6 +1,4 @@
-class dnsmasq::install {
+class dnsmasq::install inherits dnsmasq {
 
-    package { 'dnsmasq':
-        ensure => latest,
-    }
+    package { 'dnsmasq': ensure => $dnsmasq_version }
 }

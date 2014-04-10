@@ -1,4 +1,4 @@
-class dnsmasq::config {
+class dnsmasq::config inherits dnsmasq {
 
     file { '/etc/dnsmasq.conf':
         ensure  => present,
