@@ -64,7 +64,7 @@
 # --address (and --server) work with IPv6 addresses too.
 #address=/www.thekelleys.org.uk/fe80::20d:60ff:fe36:f83
 
-# You can control how dnsmasq talks to a server: this forces 
+# You can control how dnsmasq talks to a server: this forces
 # queries to 10.1.2.3 to be routed via eth1
 # --server=10.1.2.3@eth1
 
@@ -75,8 +75,10 @@
 
 # If you want dnsmasq to change uid and gid to something other
 # than the default, edit the following lines.
-#user=
-#group=
+<% if @dnsmasq_effective_uid -%>user=<%= @dnsmasq_effective_uid %>
+<% end -%>
+<% if @dnsmasq_effective_gid -%>group=<%= @dnsmasq_effective_gid %>
+<% end -%>
 
 # If you want dnsmasq to listen for DHCP and DNS requests only on
 # specified interfaces (and the loopback) give the name of the

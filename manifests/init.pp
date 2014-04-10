@@ -1,6 +1,8 @@
 class dnsmasq (
 
-    $dnsmasq_version = 'latest',
+    $dnsmasq_version       = 'latest',
+    $dnsmasq_effective_uid = 'root',
+    $dnsmasq_effective_gid = 'root',
 
 ) {
 
