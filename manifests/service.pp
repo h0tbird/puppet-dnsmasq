@@ -1,8 +1,8 @@
 class dnsmasq::service inherits dnsmasq {
 
   service { 'dnsmasq':
-    ensure  => $ensure,
-    enable  => $enable,
-    require => File['/etc/dnsmasq.conf'],
+    ensure    => $ensure,
+    enable    => $enable,
+    subscribe => File['/etc/dnsmasq.conf'],
   }
 }
