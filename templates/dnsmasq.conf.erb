@@ -529,10 +529,12 @@ dhcp-range=<%= val %>
 
 # For debugging purposes, log each DNS query as it passes through
 # dnsmasq.
-#log-queries
+<% if @log_queries -%>log-queries
+<% end -%>
 
 # Log lots of extra information about DHCP transactions.
-#log-dhcp
+<% if @log_dhcp -%>log-dhcp
+<% end -%>
 
 # Include a another lot of configuration options.
 #conf-file=/etc/dnsmasq.more.conf

@@ -6,6 +6,8 @@ class dnsmasq (
   $effective_uid = 'root',
   $effective_gid = 'root',
   $dhcp_range    = ['192.168.1.50,192.168.1.150,12h'],
+  $log_queries   = undef,
+  $log_dhcp      = undef,
 
 ) {
 
