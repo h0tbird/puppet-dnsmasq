@@ -391,10 +391,12 @@ dhcp-range=<%= val %>
 
 
 # Enable dnsmasq's built-in TFTP server
-#enable-tftp
+<% if @enable_tftp -%>enable-tftp
+<% end -%>
 
 # Set the root directory for files availble via FTP.
-#tftp-root=/var/ftpd
+<% if @tftp_root -%>tftp-root=<%= @tftp_root %>
+<% end -%>
 
 # Make the TFTP server more secure: with this set, only files owned by
 # the user dnsmasq is running as will be send over the net.
