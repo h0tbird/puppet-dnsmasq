@@ -337,7 +337,8 @@ dhcp-range=<%= val %>
 # this is you want to boot machines over the network and you will need
 # a TFTP server; either dnsmasq's built in TFTP server or an
 # external one. (See below for how to enable the TFTP server.)
-#dhcp-boot=pxelinux.0
+<% if @dhcp_boot -%>dhcp-boot=<%= @dhcp_boot %>
+<% end -%>
 
 # Boot for Etherboot gPXE. The idea is to send two different
 # filenames, the first loads gPXE, and the second tells gPXE what to

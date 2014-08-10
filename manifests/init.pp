@@ -10,6 +10,7 @@ class dnsmasq (
   $log_dhcp      = undef,
   $enable_tftp   = undef,
   $tftp_root     = '/var/ftpd',
+  $dhcp_boot     = 'pxelinux.0',
 
 ) {
 
