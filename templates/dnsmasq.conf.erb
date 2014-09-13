@@ -12,6 +12,9 @@
 
 # Never forward plain names (without a dot or domain part)
 #domain-needed
+<% if @domain_needed -%>domain-needed
+<% end -%>
+
 # Never forward addresses in the non-routed address spaces.
 #bogus-priv
 
@@ -55,6 +58,8 @@
 # Add local-only domains here, queries in these domains are answered
 # from /etc/hosts or DHCP only.
 #local=/localnet/
+<% if @local -%>local=<%= @local %>
+<% end -%>
 
 # Add domains which you want to force to an IP address here.
 # The example below send any host in doubleclick.net to a local
@@ -114,6 +119,8 @@
 # Set this (and domain: see below) if you want to have a domain
 # automatically added to simple names in a hosts-file.
 #expand-hosts
+<% if @expand_hosts -%>expand-hosts
+<% end -%>
 
 # Set the domain for dnsmasq. this is optional, but if it is set, it
 # does the following things.
@@ -123,6 +130,8 @@
 #    domain of all systems configured by DHCP
 # 3) Provides the domain part for "expand-hosts"
 #domain=thekelleys.org.uk
+<% if @domain -%>domain=<%= @domain %>
+<% end -%>
 
 # Set a different domain for a particular subnet
 #domain=wireless.thekelleys.org.uk,192.168.2.0/24

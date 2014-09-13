@@ -11,6 +11,10 @@ class dnsmasq (
   $enable_tftp   = undef,
   $tftp_root     = '/var/ftpd',
   $dhcp_boot     = 'pxelinux.0',
+  $domain_needed = undef,
+  $local         = undef,
+  $expand_hosts  = undef,
+  $domain        = undef,
 
 ) {
 
