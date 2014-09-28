@@ -144,7 +144,7 @@
 # a lease time. If you have more than one network, you will need to
 # repeat this for each network on which you want to supply DHCP
 # service.
-<% @dhcp_range.each do |val| -%>
+<% @dhcp_ranges.each do |val| -%>
 dhcp-range=<%= val %>
 <% end -%>
 
@@ -163,6 +163,10 @@ dhcp-range=<%= val %>
 # IP addresses DO NOT have to be in the range given above, they just
 # need to be on the same network. The order of the parameters in these
 # do not matter, it's permissble to give name,adddress and MAC in any order
+
+<% @dhcp_hosts.each do |val| -%>
+dhcp-host=<%= val %>
+<% end -%>
 
 # Always allocate the host with ethernet address 11:22:33:44:55:66
 # The IP address 192.168.0.60

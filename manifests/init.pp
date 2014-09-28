@@ -5,7 +5,7 @@ class dnsmasq (
   $version       = 'latest',
   $effective_uid = 'root',
   $effective_gid = 'root',
-  $dhcp_range    = ['192.168.1.50,192.168.1.150,12h'],
+  $dhcp_ranges   = [],
   $log_queries   = undef,
   $log_dhcp      = undef,
   $enable_tftp   = undef,
@@ -15,6 +15,7 @@ class dnsmasq (
   $local         = undef,
   $expand_hosts  = undef,
   $domain        = undef,
+  $dhcp_hosts    = [],
 
 ) {
 
