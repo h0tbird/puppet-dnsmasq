@@ -16,6 +16,7 @@ class dnsmasq (
   $expand_hosts  = undef,
   $domain        = undef,
   $dhcp_hosts    = [],
+  $dhcp_options  = [],
 
 ) {
 

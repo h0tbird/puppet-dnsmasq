@@ -258,6 +258,10 @@ dhcp-host=<%= val %>
 # are some options which are recommended, they are detailed at the
 # end of this section.
 
+<% @dhcp_options.each do |val| -%>
+dhcp-option=<%= val %>
+<% end -%>
+
 # Override the default route supplied by dnsmasq, which assumes the
 # router is the same machine as the one running dnsmasq.
 #dhcp-option=3,1.2.3.4
