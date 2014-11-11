@@ -1,0 +1,10 @@
+[Unit]
+Description=DNS caching server.
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/echo "$(/usr/bin/hostname -i) $(/usr/bin/hostname)" > <%= @addn_hosts %>
+ExecStart=/usr/sbin/dnsmasq -k
+
+[Install]
+WantedBy=multi-user.target
