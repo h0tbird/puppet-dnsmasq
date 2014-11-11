@@ -115,6 +115,8 @@
 # or if you want it to read another file, as well as /etc/hosts, use
 # this.
 #addn-hosts=/etc/banner_add_hosts
+<% if @addn_hosts -%>addn-hosts=<%= @addn_hosts %>
+<% end -%>
 
 # Set this (and domain: see below) if you want to have a domain
 # automatically added to simple names in a hosts-file.
