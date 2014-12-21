@@ -1,4 +1,4 @@
 class dnsmasq::install inherits dnsmasq {
 
-  package { 'dnsmasq': ensure => $version }
+  package { ['dnsmasq','syslinux-tftpboot']: ensure => $version }
 }
