@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 ExecStartPre=/usr/bin/bash -c 'sleep 3 && echo "`hostname -i` `hostname`" > <%= @addn_hosts %>'
-ExecStart=/usr/sbin/dnsmasq -k
+ExecStart=/usr/sbin/dnsmasq -k --dhcp-hostsfile=/var/lib/dnsmasq/dhcp_hosts
 
 [Install]
 WantedBy=multi-user.target
